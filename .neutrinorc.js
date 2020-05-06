@@ -4,15 +4,15 @@ const jest = require('@neutrinojs/jest');
 
 module.exports = {
   options: {
-    root: __dirname,
+    root: __dirname
   },
   use: [
     airbnb(),
     react({
       html: {
-        title: 'test'
+        title: 'Pandino.ve'
       }
     }),
-    jest(),
-  ],
+    jest()
+  ]
 };

@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader';
 import React from 'react';
-import './App.css';
+import './index.css';
 
 const message = 'Welcome to test';
 const App = () => (
