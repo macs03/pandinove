@@ -22,6 +22,8 @@
     "@neutrinojs/airbnb": "^9.1.0",
     "@neutrinojs/jest": "^9.1.0",
     "@neutrinojs/react": "^9.1.0",
+    "babel-merge": "^3.0.0",
+    "babel-plugin-root-import": "^6.5.0",
     "eslint": "^6.8.0",
     "jest": "^25.5.4",
     "neutrino": "^9.1.0",
