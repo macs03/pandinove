@@ -3,6 +3,7 @@ import React from 'react';
 import './index.css';
 
 import Algo from '~/src/ss/algo';
+import Button from '~/src/commons/button';
 
 const message = 'Welcome to test';
 
@@ -10,6 +11,7 @@ const App = () => (
   <div className="App">
     <h1>{message}</h1>
     <h2>{Algo.name}</h2>
+    <Button>El boton</Button>
   </div>
 );
 
