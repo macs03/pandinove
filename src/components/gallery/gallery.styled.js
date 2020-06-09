@@ -4,8 +4,8 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    rgba(242, 238, 238, 0.5),
-    rgba(178, 130, 140, 0.5)
+    rgba(242, 238, 238, 0.9),
+    rgba(178, 130, 140, 0.7)
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,8 +20,8 @@ const Container = styled.div`
  ========================================================================== */
   @media only screen and (min-width: 500px) {
     background: linear-gradient(
-      rgba(242, 238, 238, 0.5),
-      rgba(178, 130, 140, 0.5)
+      rgba(242, 238, 238, 0.9),
+      rgba(178, 130, 140, 0.7)
     );
     background-repeat: no-repeat;
     background-size: cover;
