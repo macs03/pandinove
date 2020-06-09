@@ -1,11 +1,11 @@
 import React from 'react';
 import Title from '~/src/commons/title';
-import './styles.css';
+import Container from './cover.styled';
 
 const Cover = () => (
-  <div className="cover">
+  <Container>
     <Title>Pandinove</Title>
-  </div>
+  </Container>
 );
 
 export default Cover;

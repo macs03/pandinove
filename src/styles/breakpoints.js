@@ -1,0 +1,9 @@
+export const mobile = '@media screen and (max-width: 768px) ';
+export const tablet = '@media screen and (min-width: 769px) ';
+export const desktop = '@media screen and (min-width: 1024px) ';
+export const desktopMinWidth990px = '@media screen and (min-width: 990px) ';
+export const widescreen = '@media screen and (min-width: 1216px) ';
+export const fullhd = '@media screen and (min-width: 1408px) ';
+export const desktopMinWidth900px = '@media screen and (min-width: 900px)';
+export const bigTabletMinWidth = '@media screen and (min-width: 1450px) ';
+export const mediumScreens = '@media (min-width: 800px) ';
