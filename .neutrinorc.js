@@ -28,7 +28,8 @@ module.exports = {
               1,
               { extensions: ['.js', '.jsx'] }
             ],
-            'consistent-return': 'off'
+            'consistent-return': 'off',
+            'arrow-parens': ['error', 'as-needed']
           }
         }
       }

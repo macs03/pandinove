@@ -10,6 +10,7 @@ module.exports = {
       { allowShortCircuit: true, allowTernary: true }
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'consistent-return': 'off'
+    'consistent-return': 'off',
+    'arrow-parens': ['error', 'as-needed']
   }
 };
