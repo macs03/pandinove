@@ -7,7 +7,7 @@ const Cover = () => (
   <Container>
     <Title>Pandinove</Title>
     <Logo src={LogoImg} />
-    <MediumTitle>The Real Andean Venezuelan Bread</MediumTitle>
+    <MediumTitle>El Real Pan Andino Venezolano</MediumTitle>
   </Container>
 );
 

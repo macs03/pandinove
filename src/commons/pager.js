@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import colors from '~/src/styles/colors';
 
 const Pulse = keyframes`
     0% {
@@ -33,12 +34,12 @@ export const PagerItem = styled.div`
   width: 15px;
   height: 15px;
   border-radius: 7.5px;
-  background: gray;
+  background: ${colors.letters};
   margin: 20px 0;
   ${props => {
     if (props.isActive) {
       return css`
-        background: red;
+        background: ${colors.primary};
       `;
     }
   }}
