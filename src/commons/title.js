@@ -5,6 +5,7 @@ const Title = styled.h1`
   text-align: center;
   padding: 0;
   margin: 0;
+  font-family: 'KaushanScript-Regular';
 `;
 
 export default Title;

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-import KaushanScript from '../../assets/fonts/KaushanScript-Regular.ttf';
-import Oswald from '../../assets/fonts/Oswald-Regular.ttf';
+import KaushanScript from '~/src/assets/fonts/KaushanScript-Regular.ttf';
+import Oswald from '~/src/assets/fonts/Oswald-Regular.ttf';
 
 const GlobalFonts = createGlobalStyle`
     @font-face {
