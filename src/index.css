@@ -7,6 +7,12 @@
   --dark: #000a14;
 }
 
+body {
+  margin: 0;
+}
+
 .App {
-  padding: 20px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }

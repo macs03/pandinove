@@ -1,18 +1,25 @@
 import { hot } from 'react-hot-loader';
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
 
-import Algo from '~/src/ss/algo';
 import Button from '~/src/commons/button';
-
-const message = 'Welcome to test';
+import Home from '~/src/components/home/home';
 
 const App = () => (
-  <div className="App">
-    <h1>{message}</h1>
-    <h2>{Algo.name}</h2>
-    <Button>El boton</Button>
-  </div>
+  <Router>
+    <Switch>
+      <Route path="/">
+        <Home />
+      </Route>
+      <Route path="/admin">
+        <Button>el boton admin</Button>
+      </Route>
+      <Route path="/cart">
+        <Button>el boton cart</Button>
+      </Route>
+    </Switch>
+  </Router>
 );
 
 export default hot(module)(App);
