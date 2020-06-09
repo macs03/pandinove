@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
 
 import Button from '~/src/commons/button';
-import Home from '~/src/components/home/home';
+import Home from '~/src/views/home/home';
 
 const App = () => (
   <Router>

@@ -1,0 +1,8 @@
+.cover {
+  width: 100%;
+  height: 100%;
+  background: url(../../images/pan-cuadrado.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
