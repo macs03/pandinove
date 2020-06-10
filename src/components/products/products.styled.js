@@ -4,7 +4,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    rgba(178, 130, 140, 0.7),
+    rgba(115, 36, 51, 0.99),
     rgba(242, 237, 238, 0.9)
   );
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@ const Container = styled.div`
  ========================================================================== */
   @media only screen and (min-width: 500px) {
     background: linear-gradient(
-      rgba(178, 130, 140, 0.7),
+      rgba(115, 36, 51, 0.99),
       rgba(242, 238, 238, 0.9)
     );
     background-repeat: no-repeat;
