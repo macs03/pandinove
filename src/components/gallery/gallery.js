@@ -8,21 +8,30 @@ const Gallery = () => {
 
   const getPosts = async () => {
     const postsFromInstagram = await InstgramApi.getInstgramPosts();
-    setPosts(postsFromInstagram);
+    setPosts(postsFromInstagram.posts);
   };
 
   useEffect(() => {
     getPosts();
   }, []);
 
+  const renderImageOrVideo = post => {
+    if (post.isVideo) {
+      return (
+        <video controls={true}>
+          <track kind="captions" />
+          <source src={post.videoUrl} type="video/mp4" />
+        </video>
+      );
+    }
+    return <img alt="tales" src={post.imageUrl} />;
+  };
+
   return (
     <Container>
       <SectionTitle primary={true}>Lo que nos gusta</SectionTitle>
       <div>
-        {posts.data &&
-          posts.data.user.edge_owner_to_timeline_media.edges.map(post => (
-            <img alt="tales" src={post.node.display_url} />
-          ))}
+        {posts.length > 0 && posts.map(post => renderImageOrVideo(post))}
       </div>
     </Container>
   );
