@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Container from './gallery.styled';
+import { Container, AssetsContainer, Asset } from './gallery.styled';
 import { SectionTitle } from '~/src/commons/title';
 import InstgramApi from '~/src/libs/instagram-api';
 
@@ -18,21 +18,27 @@ const Gallery = () => {
   const renderImageOrVideo = post => {
     if (post.isVideo) {
       return (
-        <video controls={true}>
-          <track kind="captions" />
-          <source src={post.videoUrl} type="video/mp4" />
-        </video>
+        <Asset poster={post.imageUrl}>
+          <video controls={true} poster={post.imageUrl}>
+            <track kind="captions" />
+            <source src={post.videoUrl} type="video/mp4" />
+          </video>
+        </Asset>
       );
     }
-    return <img alt="tales" src={post.imageUrl} />;
+    return (
+      <Asset poster={post.imageUrl}>
+        <img alt="tales" src={post.imageUrl} />
+      </Asset>
+    );
   };
 
   return (
     <Container>
       <SectionTitle primary={true}>Lo que nos gusta</SectionTitle>
-      <div>
+      <AssetsContainer>
         {posts.length > 0 && posts.map(post => renderImageOrVideo(post))}
-      </div>
+      </AssetsContainer>
     </Container>
   );
 };
