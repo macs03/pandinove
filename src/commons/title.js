@@ -27,7 +27,7 @@ export const MediumTitle = styled.h2`
 `;
 
 export const SectionTitle = styled.h3`
-  color: ${props => (props.primary ? colors.primary : colors.secondary)};
+  color: ${props => (props.primary ? colors.letters : colors.secondary)};
   text-align: center;
   padding: 0;
   margin: 0;

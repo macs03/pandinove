@@ -39,7 +39,7 @@ export const PagerItem = styled.div`
   ${props => {
     if (props.isActive) {
       return css`
-        background: ${colors.primary};
+        background: ${colors.secondary};
       `;
     }
   }}

@@ -5,7 +5,7 @@ import panLarge from '../../assets/images/pan-horizontal.jpeg';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(115, 36, 51, 0.5), rgba(242, 238, 238, 0.5)),
+  background: linear-gradient(rgba(63, 60, 59, 0.5), rgba(242, 238, 238, 0.5)),
     url(${panCuadrado});
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,10 +19,7 @@ export const Container = styled.div`
      Media Queries - bigger than 500px
  ========================================================================== */
   @media only screen and (min-width: 500px) {
-    background: linear-gradient(
-        rgba(115, 36, 51, 0.5),
-        rgba(242, 238, 238, 0.5)
-      ),
+    background: linear-gradient(rgba(63, 60, 59, 0.5), rgba(242, 238, 238, 0.5)),
       url(${panLarge});
     background-repeat: no-repeat;
     background-size: cover;

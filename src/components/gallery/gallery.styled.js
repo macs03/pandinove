@@ -3,10 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    rgba(242, 238, 238, 0.9),
-    rgba(115, 36, 51, 0.99)
-  );
+  background: linear-gradient(rgba(242, 238, 238, 0.9), rgba(63, 60, 59, 0.99));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 20% center;
@@ -21,7 +18,7 @@ export const Container = styled.div`
   @media only screen and (min-width: 500px) {
     background: linear-gradient(
       rgba(242, 238, 238, 0.9),
-      rgba(115, 36, 51, 0.99)
+      rgba(63, 60, 59, 0.99)
     );
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,7 +62,7 @@ export const Asset = styled.div`
     background-image: linear-gradient(
         to left,
         rgba(242, 238, 238, 0.5),
-        rgba(115, 36, 51, 0.5)
+        rgba(63, 60, 59, 0.5)
       ),
       url(${props.poster});
     background-repeat: no-repeat;
