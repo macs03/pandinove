@@ -32,18 +32,35 @@ export const Container = styled.div`
 export const AssetsContainer = styled.div`
   width: 95%;
   height: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 1em;
+  margin-top: 4em;
+  > div {
+    > div {
+      height: 80vh;
+      border-radius: 8px;
+      > div {
+        height: 100%;
+        border-radius: 8px;
+        > ul {
+          height: 100%;
+          border-radius: 8px;
+          > li {
+            height: 100%;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const Asset = styled.div`
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2em;
+  border-radius: 8px;
   ${props => css`
     background-image: linear-gradient(
         to left,
@@ -54,4 +71,26 @@ export const Asset = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
   `}
+  >img,video {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ==========================================================================
+     Media Queries - bigger than 500px
+ ========================================================================== */
+  @media only screen and (min-width: 500px) {
+    > img,
+    video {
+      padding: 10em;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    > img,
+    video {
+      padding: 30em;
+    }
+  }
 `;

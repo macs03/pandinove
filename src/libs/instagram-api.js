@@ -45,7 +45,7 @@ const handleResponse = response => {
 
 const IntagramApi = {
   getInstgramPosts: () => {
-    const url = `https://www.instagram.com/graphql/query/?query_hash=eddbde960fed6bde675388aac39a3657&variables={"id":"4116114819","first":1}`;
+    const url = `https://www.instagram.com/graphql/query/?query_hash=eddbde960fed6bde675388aac39a3657&variables={"id":"4116114819","first":24}`;
 
     return new Promise((resolve, reject) => {
       fetch(url)
