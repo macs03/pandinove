@@ -32,6 +32,11 @@ export const Logo = styled.img`
   height: 12em;
   border-radius: 50%;
   margin-bottom: 2em;
+  background: linear-gradient(
+    135deg,
+    rgba(242, 238, 238, 0.9) 60.71%,
+    rgba(63, 60, 59, 0.8)
+  );
   @media only screen and (min-width: 500px) {
     width: 24em;
     height: 24em;
