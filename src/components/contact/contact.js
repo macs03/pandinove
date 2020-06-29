@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'infinite-react-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { Container } from '~/src/components/gallery/gallery.styled';
 import { SectionTitle } from '~/src/commons/title';
 import {
@@ -49,10 +48,30 @@ const Contact = () => {
         )}
       </Comments>
       <SocialNetworks>
-        <FontAwesomeIcon icon={faCoffee} />
-        <FontAwesomeIcon icon={faCoffee} />
-        <FontAwesomeIcon icon={faCoffee} />
-        <FontAwesomeIcon icon={faCoffee} />
+        <a
+          href="https://www.instagram.com/pandinove/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={['fab', 'instagram']} />
+        </a>
+        <a
+          href="https://wa.me/12242797445?text=Quiero%20El%20Real%20pan%20andino%20venezolano"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={['fab', 'whatsapp']} />
+        </a>
+        <a
+          href="mailto:pandino.contactus@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon="envelope" />
+        </a>
+        <a href="tel:1-224-279-7445" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon="phone" />
+        </a>
       </SocialNetworks>
       <ContactForm />
       <Footer>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import colors from '~/src/styles/colors';
 
 export const Comments = styled.section`
-  height: 150px;
+  height: 120px;
   width: 100%;
   margin-top: 2em;
   display: flex;
@@ -51,7 +51,20 @@ export const Comment = styled.div`
 export const SocialNetworks = styled.section`
   height: 50px;
   width: 100%;
-  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${colors.secondary};
+    margin: 0 1.5em;
+    background: ${colors.letters};
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+  }
 `;
 
 export const ContactForm = styled.section`
