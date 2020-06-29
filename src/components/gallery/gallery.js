@@ -30,7 +30,7 @@ const Gallery = () => {
     }
     return (
       <Asset poster={post.imageUrl}>
-        <img alt="tales" src={post.imageUrl} />
+        <img alt={post.imageUrl} src={post.imageUrl} />
       </Asset>
     );
   };
@@ -44,6 +44,7 @@ const Gallery = () => {
             showThumbs={false}
             showIndicators={false}
             infiniteLoop={true}
+            swipeable={false}
           >
             {posts.map(post => renderImageOrVideo(post))}
           </Carousel>
