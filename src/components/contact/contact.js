@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'infinite-react-carousel';
+import { useToasts } from 'react-toast-notifications';
+import { useForm } from 'react-hook-form';
+import emailJs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Container } from '~/src/components/gallery/gallery.styled';
 import { SectionTitle } from '~/src/commons/title';
@@ -13,7 +16,14 @@ import {
 
 import InstgramApi from '~/src/libs/instagram-api';
 
+const userID = 'user_XhWjzmKsGW4hcx0ogon6e';
+const serviceID = 'balloonjoy';
+const templateID = 'template_ziReR0i8';
+
 const Contact = () => {
+  // Init service for email
+  emailJs.init(userID);
+
   const [comments, setComments] = useState([]);
 
   const getComments = async () => {
@@ -24,6 +34,37 @@ const Contact = () => {
   useEffect(() => {
     getComments();
   }, []);
+
+  const { register, handleSubmit, errors } = useForm(); // initialise the hook
+
+  const { addToast } = useToasts(); // Initialise toast
+
+  const onSubmit = (data, event) => {
+    const templateParams = {
+      reply_to: data.email,
+      subject: data.subject,
+      from_name: data.fullname,
+      to_name: 'Pandinove',
+      cell_phone: data.phone,
+      message_html: data.message
+    };
+
+    emailJs.send(serviceID, templateID, templateParams).then(
+      () => {
+        addToast('Your Message has been send', {
+          appearance: 'success',
+          autoDismiss: true
+        });
+        event.target.reset();
+      },
+      () => {
+        addToast('Somenthing went wrong', {
+          appearance: 'error',
+          autoDismiss: true
+        });
+      }
+    );
+  };
 
   const renderComments = comment => (
     <div>
@@ -73,7 +114,72 @@ const Contact = () => {
           <FontAwesomeIcon icon="phone" />
         </a>
       </SocialNetworks>
-      <ContactForm />
+      <ContactForm>
+        <form onSubmit={handleSubmit(onSubmit)} id="form">
+          <input
+            name="fullname"
+            placeholder="Full Name"
+            ref={register({ required: true })}
+          />
+          {errors.fullname && (
+            <span className="contact-title">Full name is required.</span>
+          )}
+          <input
+            name="email"
+            type="email"
+            placeholder="E-mail"
+            ref={register({
+              required: true,
+              pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+            })}
+          />
+          {errors.email && (
+            <span className="contact-title">E-mail is required.</span>
+          )}
+          <input
+            name="phone"
+            type="tel"
+            placeholder="Phone"
+            ref={register({ pattern: /\d+/, required: true })}
+          />
+          {errors.phone && (
+            <span className="contact-title">
+              Please enter number for phone.
+            </span>
+          )}
+
+          <input
+            name="subject"
+            placeholder="Subject"
+            ref={register({ required: true })}
+          />
+          {errors.fullname && (
+            <span className="contact-title">Subject is required.</span>
+          )}
+
+          <textarea
+            name="message"
+            form="form"
+            placeholder="Tell us more about your event (number of kids, how many hours of service, type of event) or any other important detail."
+            maxLength={200}
+            rows="10"
+            ref={register({
+              required: true,
+              maxlength: 200,
+              minLength: 20
+            })}
+          />
+          {errors.message && (
+            <span className="contact-title">
+              Please enter your message, with at least 20 characters
+            </span>
+          )}
+
+          <button className="primary-button send-button" type="submit">
+            <span className="button-text">Send Message</span>
+          </button>
+        </form>
+      </ContactForm>
       <Footer>
         <div>
           <span>Pandinove &copy;</span>

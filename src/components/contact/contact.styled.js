@@ -70,7 +70,6 @@ export const SocialNetworks = styled.section`
 export const ContactForm = styled.section`
   height: 500px;
   width: 100%;
-  background: yellow;
 `;
 
 export const Footer = styled.section`
