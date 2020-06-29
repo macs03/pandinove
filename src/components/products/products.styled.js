@@ -66,7 +66,12 @@ export const ProductCard = styled.section`
         align-items: center;
         > span {
           color: ${colors.letters};
-          font-size: 1.7em;
+          font-size: 2em;
+          font-family: 'KaushanScript-Regular';
+        }
+        > .description {
+          color: ${colors.letters};
+          font-size: 1.2em;
           font-family: 'KaushanScript-Regular';
         }
         > .price {
