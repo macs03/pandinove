@@ -70,6 +70,29 @@ export const SocialNetworks = styled.section`
 export const ContactForm = styled.section`
   height: 500px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  > form {
+    align-self: center;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 90%;
+    > input,
+    textarea {
+      width: 100%;
+      margin: 0.8em 0;
+      border-radius: 0.25em;
+      border-style: none;
+    }
+    > input {
+      height: 30px;
+    }
+  }
 `;
 
 export const Footer = styled.section`
