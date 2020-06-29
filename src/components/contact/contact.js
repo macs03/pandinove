@@ -17,8 +17,8 @@ import {
 import InstgramApi from '~/src/libs/instagram-api';
 
 const userID = 'user_XhWjzmKsGW4hcx0ogon6e';
-const serviceID = 'balloonjoy';
-const templateID = 'template_ziReR0i8';
+const serviceID = 'pandino';
+const templateID = 'pandino';
 
 const Contact = () => {
   // Init service for email
@@ -51,14 +51,14 @@ const Contact = () => {
 
     emailJs.send(serviceID, templateID, templateParams).then(
       () => {
-        addToast('Your Message has been send', {
+        addToast('Tu mensaje ha sidó enviado', {
           appearance: 'success',
           autoDismiss: true
         });
         event.target.reset();
       },
       () => {
-        addToast('Somenthing went wrong', {
+        addToast('Algo salió mal', {
           appearance: 'error',
           autoDismiss: true
         });
