@@ -42,7 +42,7 @@ export const SectionTitle = styled.h3`
 `;
 
 export const SmallTitle = styled.h4`
-  color: ${colors.white};
+  color: ${props => (props.primary ? colors.letters : colors.white)};
   text-align: center;
   padding: 0;
   margin: 0;

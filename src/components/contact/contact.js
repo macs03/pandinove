@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import emailJs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Container } from '~/src/components/gallery/gallery.styled';
-import { SectionTitle } from '~/src/commons/title';
+import { SectionTitle, SmallTitle } from '~/src/commons/title';
 import {
   Footer,
   Comments,
@@ -115,6 +115,9 @@ const Contact = () => {
         </a>
       </SocialNetworks>
       <ContactForm>
+        <SmallTitle primary={true}>
+          Para Catering Service o contacto escribenos
+        </SmallTitle>
         <form onSubmit={handleSubmit(onSubmit)} id="form">
           <input
             name="fullname"
@@ -160,7 +163,7 @@ const Contact = () => {
           <textarea
             name="message"
             form="form"
-            placeholder="Tell us more about your event (number of kids, how many hours of service, type of event) or any other important detail."
+            placeholder="Tell us more about your event (number of guests, how many products, type of event) or any other important detail."
             maxLength={200}
             rows="10"
             ref={register({
