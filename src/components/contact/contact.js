@@ -13,6 +13,7 @@ import {
   SocialNetworks,
   ContactForm
 } from '~/src/components/contact/contact.styled';
+import Button from '~/src/commons/button';
 
 import InstgramApi from '~/src/libs/instagram-api';
 
@@ -178,9 +179,9 @@ const Contact = () => {
             </span>
           )}
 
-          <button className="primary-button send-button" type="submit">
-            <span className="button-text">Send Message</span>
-          </button>
+          <Button type="submit">
+            <span>Enviar Mensaje</span>
+          </Button>
         </form>
       </ContactForm>
       <Footer>
