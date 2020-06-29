@@ -41,8 +41,8 @@ export const ProductCard = styled.section`
   align-items: center;
   > .card {
     background: ${colors.white};
-    width: 50%;
-    height: 90%;
+    width: 85%;
+    height: 80%;
     border-radius: 5px;
     > .product-image {
       background: url(${panCuadrado});
@@ -80,6 +80,16 @@ export const ProductCard = styled.section`
           margin-top: 1em;
         }
       }
+    }
+  }
+
+  /* ==========================================================================
+     Media Queries - bigger than 500px
+ ========================================================================== */
+  @media only screen and (min-width: 500px) {
+    > .card {
+      width: 50%;
+      height: 90%;
     }
   }
 `;
