@@ -4,7 +4,6 @@ import Oswald from '~/src/assets/fonts/Oswald-Regular.ttf';
 import HeyAugust from '~/src/assets/fonts/Hey-August.ttf';
 
 const GlobalFonts = createGlobalStyle`
-    
     @font-face {
         font-family: 'Oswald-Regular';
         src: url(${Oswald}) format('truetype');
