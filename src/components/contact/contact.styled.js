@@ -37,7 +37,7 @@ export const Comment = styled.div`
     > p {
       color: ${colors.letters};
       font-size: 1em;
-      font-family: 'KaushanScript-Regular';
+      font-family: 'Hey-August';
     }
     > span {
       color: ${colors.letters};

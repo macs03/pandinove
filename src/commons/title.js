@@ -6,7 +6,7 @@ export const Title = styled.h1`
   text-align: center;
   padding: 0;
   margin: 0;
-  font-family: 'KaushanScript-Regular';
+  font-family: 'Hey-August';
   visibility: hidden;
   position: absolute;
   top: 0;
@@ -18,7 +18,7 @@ export const MediumTitle = styled.h2`
   text-align: center;
   padding: 0;
   margin: 0;
-  font-family: 'KaushanScript-Regular';
+  font-family: 'Hey-August';
   font-size: 2.4em;
 
   @media only screen and (min-width: 500px) {
@@ -31,7 +31,7 @@ export const SectionTitle = styled.h3`
   text-align: center;
   padding: 0;
   margin: 0;
-  font-family: 'KaushanScript-Regular';
+  font-family: 'Hey-August';
   font-size: 1.4em;
   position: absolute;
   top: 25px;
@@ -46,5 +46,5 @@ export const SmallTitle = styled.h4`
   text-align: center;
   padding: 0;
   margin: 0;
-  font-family: 'KaushanScript-Regular';
+  font-family: 'Hey-August';
 `;

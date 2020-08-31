@@ -67,12 +67,12 @@ export const ProductCard = styled.section`
         > span {
           color: ${colors.letters};
           font-size: 2em;
-          font-family: 'KaushanScript-Regular';
+          font-family: 'Hey-August';
         }
         > .description {
           color: ${colors.letters};
           font-size: 1.2em;
-          font-family: 'KaushanScript-Regular';
+          font-family: 'Hey-August';
         }
         > .price {
           font-size: 2.2em;
