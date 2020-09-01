@@ -15,11 +15,13 @@ const Home = () => {
     setcurrentPage(number); // set currentPage number, to reset it from the previous selected.
   };
 
+  const productsPage = 2;
+
   useEffect(() => {
     if (window.location.hash === '#products') {
-      handlePageChange(2);
+      handlePageChange(productsPage);
     }
-  });
+  }, [productsPage]);
 
   const isActive = page => page === currentPage;
 
