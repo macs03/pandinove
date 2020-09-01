@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPageScroller from 'react-page-scroller';
 import Sections from '~/src/commons/sections';
 import Cover from '~/src/components/cover/cover';
@@ -14,6 +14,12 @@ const Home = () => {
   const handlePageChange = number => {
     setcurrentPage(number); // set currentPage number, to reset it from the previous selected.
   };
+
+  useEffect(() => {
+    if (window.location.pathname === '/products') {
+      handlePageChange(2);
+    }
+  });
 
   const isActive = page => page === currentPage;
 
