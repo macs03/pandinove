@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if (window.location.pathname === '/products') {
+    if (window.location.hash === '#products') {
       handlePageChange(2);
     }
   });
